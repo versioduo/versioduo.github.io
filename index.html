@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="revised" content="2021-08-28">
+  <meta name="copyright" content="Kay Sievers, kay@vrfy.org">
+  <meta name="rating" content="safe for kids">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Versio Duo - Software and Electronics for Musical Devices</title>
+  <meta name="description" content="Building blocks for musical instruments, analog sound for digital notes.">
+  <meta name="keywords" content="Acoustic Robots, Musical Robots, MIDI, Musical Instruments, Electronics, Software">
+  <link rel="canonical" href="https://versioduo.com/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="thumbnail" content="v2-logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <script src="js/swiper-bundle.min.js"></script>
+  <style>
+    html {
+      scroll-padding-top: 3.25rem;
+      scroll-behavior: smooth;
+      hyphens: auto;
+    }
+
+    body {
+      font-family: 'DIN 1451', sans-serif;
+    }
+
+    .inactive {
+      pointer-events: none;
+    }
+
+    /* Avoid blue-colored Home/Brand */
+    a.navbar-home:focus {
+      color: hsl(0, 0%, 29%);
+    }
+
+    /* Do not mess with the DIN font, fake bold looks really ugly */
+    .title {
+      font-weight: 400;
+    }
+
+    section {
+      background-color: hsl(0, 0%, 92%);
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .subsection {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination-bullet-active {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top" aria-label="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-home navbar-item is-size-4" href="">
+          <img class="mr-2" src="v2-logo.png" alt="">
+          <h1>
+            Versio Duo
+          </h1>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span class="inactive" aria-hidden="true"></span>
+          <span class="inactive" aria-hidden="true"></span>
+          <span class="inactive" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link is-arrowless" href="#instruments">
+              Instruments
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="#glockenspiel-37">
+                glockenspiel-37
+              </a>
+              <a class="navbar-item" href="#kontra-2">
+                kontra-2
+              </a>
+              <a class="navbar-item" href="#schlag-7">
+                schlag-7
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link is-arrowless" href="#electronics">
+              Electronics
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="#axis">
+                axis
+              </a>
+              <a class="navbar-item" href="#cable">
+                cable
+              </a>
+              <a class="navbar-item" href="#connect">
+                connect
+              </a>
+              <a class="navbar-item" href="#control">
+                control
+              </a>
+              <a class="navbar-item" href="#dmx">
+                dmx
+              </a>
+              <a class="navbar-item" href="#express">
+                express
+              </a>
+              <a class="navbar-item" href="#express-mini">
+                express-mini
+              </a>
+              <a class="navbar-item" href="#knob">
+                knob
+              </a>
+              <a class="navbar-item" href="#pad">
+                pad
+              </a>
+              <a class="navbar-item" href="#power">
+                power
+              </a>
+              <a class="navbar-item" href="#pulse">
+                pulse
+              </a>
+              <a class="navbar-item" href="#range">
+                range
+              </a>
+              <a class="navbar-item" href="#serial">
+                serial
+              </a>
+              <a class="navbar-item" href="#step">
+                step
+              </a>
+              <a class="navbar-item" href="#usb">
+                usb
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link is-arrowless" href="#software">
+              Software
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://github.com/versioduo/download" target="software">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Downloads</span>
+              </a>
+              <a class="navbar-item" href="https://github.com/versioduo/" target="software">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+          <a class="navbar-item" href="#links">
+            Links
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class=" button is-outlined" href="#contact">
+              <span class="icon">
+                <i class="far fa-address-card"></i>
+              </span>
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="#" class="section is-paddingless has-background-white">
+    <div class="container">
+      <figure class="image is-4by3">
+        <img src="top.jpg" alt="Versio Duo Acoustic Instruments">
+      </figure>
+    </div>
+  </div>
+
+  <section id="instruments">
+    <div class="container">
+      <h2 class="title">
+        Instruments
+      </h2>
+
+      <div id="glockenspiel-37" class="subsection">
+        <h3 class="title">
+          glockenspiel-37
+        </h3>
+        <p class="subtitle">
+          37 Bar Glockenspiel
+        </p>
+        <p>
+          Notes are controlled by a trigger and a damper, it allows a piano-like
+          velocity and tone duration control; MIDI Note-Off will cause the
+          currently playing tone to be damped. One RGB LED per note visualizes
+          the playing notes. It is built using five <a href="#pulse">pulse</a> devices
+          and one <a href="#control">control</a> device.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Power Supply</td>
+              <td>24 V, 120 W</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>power supply, V2 plug. V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>120 × 23 × 14 cm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>9 kg</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="glockenspiel-37/front.jpg" alt="glockenspiel-37, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="glockenspiel-37/top.jpg" alt="glockenspiel-37, top" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="glockenspiel-37/side.jpg" alt="glockenspiel-37, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="columns mt-3">
+          <div class="column">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" srcdoc="
+                <link rel='stylesheet' href='css/iframe.css'>
+                <a href='https://www.youtube-nocookie.com/embed/xs7DghGC5Mo?modestbranding=1;rel=0;autoplay=1'>
+                  <img src='glockenspiel-37/video.jpg' alt='glockenspiel-37 video'>
+                  <span>▶ YouTube</span>
+                </a>
+                <span class='title'>glockenspiel-37</span>" allowfullscreen title="glockenspiel-37">
+              </iframe>
+            </figure>
+          </div>
+          <div class="column">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" srcdoc="
+                <link rel='stylesheet' href='css/iframe.css'>
+                <a href='https://www.youtube-nocookie.com/embed/HIhS_E2sS5U?modestbranding=1;rel=0;autoplay=1'>
+                  <img src='glockenspiel-37/video.jpg' alt='glockenspiel-37 damper mode video'>
+                  <span>▶ YouTube</span>
+                </a>
+                <span class='title'>glockenspiel-37 (damper mode)</span>" allowfullscreen title="glockenspiel-37">
+              </iframe>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div id="kontra-2" class="subsection">
+        <h3 class="title">
+          kontra-2
+        </h3>
+        <p class="subtitle">
+          2 String Double Bass
+        </p>
+        <p>
+          It is built using two <a href="#step">step</a> controllers
+          and a <a href="#control">control</a> device.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Power Supply</td>
+              <td>24 V, 120 W</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>power supply, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>60 x 191 × 52 cm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>39 kg</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="kontra-2/front.jpg" alt="kontra-2, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="kontra-2/side.jpg" alt="kontra-2, side" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="kontra-2/back.jpg" alt="kontra-2, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="kontra-2/rail.jpg" alt="kontra-2, rail" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="kontra-2/strings.jpg" alt="kontra-2, strings" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="kontra-2/wheels.jpg" alt="kontra-2, wheels" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="kontra-2/driver.jpg" alt="kontra-2, driver" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="schlag-7" class="subsection">
+        <h3 class="title">
+          schlag-7
+        </h3>
+        <p class="subtitle">
+          Drum Set
+        </p>
+        <p>
+          It is built using a <a href="#step">step</a> controller, a <a href="#pulse">pulse</a> controller,
+          and a <a href="#control">control</a> device.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Power Supply</td>
+              <td>24 V, 120 W</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>power supply, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>55 x 155 × 73 cm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>40 kg</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="schlag-7/front-l.jpg" alt="schlag-7, front left">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="schlag-7/front-r.jpg" alt="schlag-7, front right" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="schlag-7/hi-hat.jpg" alt="schlag-7, hi-hat" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="schlag-7/snare.jpg" alt="schlag-7, snare" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="schlag-7/brush.jpg" alt="schlag-7, brush" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="schlag-7/control.jpg" alt="schlag-7, controller" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="schlag-7/kick.jpg" alt="schlag-7, kick drum" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="electronics">
+    <div class="container">
+      <h2 class="title">
+        Electronics
+      </h2>
+      <p class="subtitle">
+        Building Blocks for Musical Devices
+      </p>
+      <p>
+        V2 devices are connected via a bi-directional full-duplex
+        <a href="https://en.wikipedia.org/wiki/RS-422" target="wiki">RS422</a> serial connection.
+        The connectors are called <i>V2 Plug</i> and <i>V2 Socket</i>.
+        Additional wires supply power to the devices and connect the
+        microcontroller's USB port to a USB host.
+      </p>
+      <p>
+        V2 devices are daisy-chained, a child device's <i>V2 Plug</i> is
+        connected to the parent device's <i>V2 Socket</i>. The V2 wire protocol
+        carries the address of the device it talks to, the parent devices
+        forward the messages.
+      </p>
+      <p>
+        V2 devices are <a href="https://versioduo.com/configure/" target="software">configured</a> with a web browser.
+        The <a href="https://versioduo.com/download/" target="software">firmware</a> is
+        <a href="https://github.com/versioduo/configure#firmware-update" target="software">updated</a>
+        using the web interface.
+      </p>
+
+      <div id="axis" class="subsection">
+        <h3 class="title">
+          axis
+        </h3>
+        <p class="subtitle">
+          Orientation Sensor
+        </p>
+        <p>
+          Intelligent 9-axis absolute orientation <a href="https://www.bosch-sensortec.com/products/smart-sensors/bno055.html" target="axis">sensor</a>,
+          combining accelerometer, gyroscope, magnetometer.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Device power supply</td>
+              <td>V2 plug</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>49 × 49 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>20 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="axis/front.jpg" alt="axis, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="axis/back.jpg" alt="axis, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="axis/inside.jpg" alt="axis, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="axis/side.jpg" alt="axis, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="cable" class="subsection">
+        <h3 class="title">
+          cable
+        </h3>
+        <p class="subtitle">
+          Ribbon Cable with IDC Connectors
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Wires</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Pins</td>
+              <td>2 × 5</td>
+            </tr>
+            <tr>
+              <td>Pitch</td>
+              <td>1.27 mm</td>
+            </tr>
+          </tbody>
+        </table>
+        <figure class="image is-4by3">
+          <img src="cable/front.jpg" alt="ribbon cable">
+        </figure>
+      </div>
+
+      <div id="connect" class="subsection">
+        <h3 class="title">
+          connect
+        </h3>
+        <p class="subtitle">
+          USB to V2 Socket Controller
+        </p>
+        <p>
+          Active controller to connect a USB host to a V2 socket. It
+          converts MIDI signals to a full-duplex, bi-directional
+          <a href="https://en.wikipedia.org/wiki/RS-422" target="wiki">RS422</a>
+          serial connection, which can be used over long distances.
+        </p>
+        <p>
+          With customized configuration, it can act as a standalone device which
+          maps MIDI signals and drives devices like <a href="#pad">pad</a>, <a href="#pulse">pulse</a> or
+          <a href="#express">express</a>.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Device power supply</td>
+              <td>USB host power</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>USB-C, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>66 × 18 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>13 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="connect/front.jpg" alt="connect, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="connect/back.jpg" alt="connect, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="connect/inside.jpg" alt="connect, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="connect/side.jpg" alt="connect, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="control" class="subsection">
+        <h3 class="title">
+          control
+        </h3>
+        <p class="subtitle">
+          Device Controller
+        </p>
+        <p>
+          Connects devices like <a href="#pulse">pulse</a> or <a href="#step">step</a>.
+          It supplies power to the connected devices and can drive an RGB LED strip.
+        </p>
+        <p>
+          A <a href="#usb">usb</a> connector is used to connect it directly
+          to a USB host. For longer distances, a <a href="#connect">connect</a>
+          device can be used to connect a USB host over a
+          <a href="https://en.wikipedia.org/wiki/RS-422" target="wiki">RS422</a>
+          serial connection.
+        </p>
+        <p>
+          It is used for the <a href="#glockenspiel-37">glockenspiel-37</a>,
+          connects five <a href="#pulse">pulse</a> devices drives the 37 LEDs.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Device power supply</td>
+              <td>6-24 V</td>
+            </tr>
+            <tr>
+              <td>LED strip maximum current</td>
+              <td>2.5 A</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>power supply wire connectors, LED wire connectors, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>71 × 18 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>31 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="control/front.jpg" alt="control, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="control/back.jpg" alt="control, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="control/inside.jpg" alt="control, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="control/side.jpg" alt="control, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="dmx" class="subsection">
+        <h3 class="title">
+          dmx
+        </h3>
+        <p class="subtitle">
+          DMX Adapter
+        </p>
+        <p>
+          The device is <a href="https://versioduo.com/configure/">configured</a> with a web browser.
+          An <a href="https://www.ableton.com/live/" target="ableton">Ableton</a> Live
+          <a href="https://github.com/versioduo/dmx/" target="software">device</a> maps track automation to DMX values.
+        </p>
+        <table class=" table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Device power supply</td>
+              <td>USB host power</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>USB-C, 2.5 mm jack</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>66 × 18 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>13 g</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="dmx/cable.jpg" alt="dmx, with cable" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="dmx/front.jpg" alt="dmx, front" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="dmx/back.jpg" alt="dmx, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="dmx/inside.jpg" alt="dmx, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="dmx/side.jpg" alt="dmx, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="express" class="subsection">
+        <h3 class="title">
+          express
+        </h3>
+        <p class="subtitle">
+          16 Channel Analog Expression Controller
+        </p>
+        <p>
+          Samples the connected potentiometers from expression pedals, controllers,
+          <a href="#knob">knobs</a>, and sends out MIDI Control Change values
+          accordingly. The expression devices are connected with 2.5 mm TRS jacks.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Channels</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>Device power supply</td>
+              <td>V2 plug</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>2.5 mm TRS jacks, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>191 × 49 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>78 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express/front.jpg" alt="express, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express/back.jpg" alt="express, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express/inside.jpg" alt="express, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express/side.jpg" alt="express, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="express-mini" class="subsection">
+        <h3 class="title">
+          express-mini
+        </h3>
+        <p class="subtitle">
+          2 Channel Analog Expression Controller
+        </p>
+        <p>
+          Samples the connected potentiometers from expression pedals, controllers,
+          <a href="#knob">knobs</a>, and sends out MIDI Control Change values accordingly.
+          Alternative <a href="https://versioduo.com/download/" target="software">firmware</a> supports
+          Force-Sensitive-Resistors (FSR) acting as drums pads, similar to <a href="#knob">pad</a>.
+          The expression devices are connected with 2.5 mm TRS jacks.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Channels</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Device power supply</td>
+              <td>V2 plug</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>2.5 mm TRS jacks, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>61 × 49 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>26 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express-mini/front.jpg" alt="express mini, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express-mini/back.jpg" alt="express mini, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express-mini/inside.jpg" alt="express mini, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="express-mini/side.jpg" alt="express mini, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="knob" class="subsection">
+        <h3 class="title">
+          knob
+        </h3>
+        <p class="subtitle">
+          Analog Expression Knob
+        </p>
+        <p>
+          Potentiometer with a 2.5 mm TRS jack. The ring supplies the reference
+          voltage, the tip is connected to the potentiometer's wiper.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Resistance</td>
+              <td>10 kΩ</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>2.5 mm TRS jack</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>49 × 49 × 26 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>40 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="knob/front.jpg" alt="knob, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="knob/back.jpg" alt="knob, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="knob/side.jpg" alt="knob, side" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="knob/many.jpg" alt="knobs" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="pad" class="subsection">
+        <h3 class="title">
+          pad
+        </h3>
+        <p class="subtitle">
+          Drum Pad
+        </p>
+        <p>
+          With Note-On and Note-Off Velocity, Aftertouch, RGB Light.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Device power supply</td>
+              <td>V2 plug</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>87 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>55 g</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pad/front.jpg" alt="pad, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pad/back.jpg" alt="pad, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pad/inside.jpg" alt="pad, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pad/side.jpg" alt="pad, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="power" class="subsection">
+        <h3 class="title">
+          power
+        </h3>
+        <p class="subtitle">
+          Power Supply and Debug Connector
+        </p>
+        <p>
+          Inserted into a V2 connection, it supplies the devices connected to its
+          V2 socket with power. The power connection of V2 plug side will stay
+          disconnected.
+        </p>
+        <p>
+          It provides USB access to the device connected to its V2 socket. It allows
+          to debug the connected device, while the device still maintains the data
+          connection to its V2 parent device.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Connectors</td>
+              <td>USB-C, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>67 × 18 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>12 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="power/front.jpg" alt="power, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="power/back.jpg" alt="power, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="power/inside.jpg" alt="power, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="power/side.jpg" alt="power, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="pulse" class="subsection">
+        <h3 class="title">
+          pulse
+        </h3>
+        <p class="subtitle">
+          16 Channel Solenoid Controller
+        </p>
+        <p>
+          Intelligent solenoid power controller, automatically adjusts to
+          changes in supply voltage or different solenoid parameters.
+        </p>
+        <p>
+          It is driven by commands which specify the length in seconds and the
+          power in watts of a solenoid trigger impulse. A typical value for a
+          trigger of a <a href="#glockenspiel-37">glockenspiel-37</a> note is a
+          30 milliseconds and a 2.5 watts pulse. The controller calculates the
+          PWM duty cycle using the measured solenoid resistance and the supplied
+          voltage.
+        </p>
+        <p>
+          The controller constantly measures the supply voltage and solenoid
+          resistance. Changes are visualized with the channel LEDs. To protect
+          itself, it monitors the overall current it draws from the power supply
+          and isolates channels which are short cut.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Channels</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>Input voltage</td>
+              <td>6-24 V</td>
+            </tr>
+            <tr>
+              <td>Maximum overall current</td>
+              <td>5 A</td>
+            </tr>
+            <tr>
+              <td>PWM frequency</td>
+              <td>20 kHz</td>
+            </tr>
+            <tr>
+              <td>Device power supply</td>
+              <td>V2 plug</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>power supply wire connectors, solenoid wire connectors, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>171 × 49 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>72 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pulse/front.jpg" alt="pulse, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pulse/back.jpg" alt="pulse, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pulse/inside.jpg" alt="pulse, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pulse/side.jpg" alt="pulse, side" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pulse/front-cable.jpg" alt="pulse with cables, front" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pulse/back-cable.jpg" alt="pulse with cables, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="pulse/inside-cable.jpg" alt="pulse with cables, inside" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="range" class="subsection">
+        <h3 class="title">
+          range
+        </h3>
+        <p class="subtitle">
+          Proximity Sensor
+        </p>
+        <p>
+          Proximity and ranging <a href="https://www.st.com/content/st_com/en/products/imaging-and-photonics-solutions/proximity-sensors/vl53l3cx.html" target="range">sensor</a>.
+          Detects an object in 10mm up to 3m distance in the field of view, and sends MIDI control messages accordingly.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Device power supply</td>
+              <td>USB host power</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>49 × 49 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>19 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="range/front.jpg" alt="range, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="range/back.jpg" alt="range, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="range/inside.jpg" alt="range, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="range/side.jpg" alt="range, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="serial" class="subsection">
+        <h3 class="title">
+          serial
+        </h3>
+        <p class="subtitle">
+          Serial MIDI Interface
+        </p>
+        <p>
+          Serial MIDI to V2 socket adapter.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Device power supply</td>
+              <td>V2 plug</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>49 × 61 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>25 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="serial/front.jpg" alt="serial, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="serial/back.jpg" alt="serial, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="serial/inside.jpg" alt="serial, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="serial/side.jpg" alt="serial, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="step" class="subsection">
+        <h3 class="title">
+          step
+        </h3>
+        <p class="subtitle">
+          4 Channel Stepper Motor Controller
+        </p>
+        <p>
+          Intelligent stepper <a href="https://www.trinamic.com/products/integrated-circuits/details/tmc2130/" target="step">driver</a>
+          with acceleration ramp, absolute step movement, and motor rotation interface.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Channels</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>Input voltage</td>
+              <td>6-24 V</td>
+            </tr>
+            <tr>
+              <td>Device power supply</td>
+              <td>V2 plug</td>
+            </tr>
+            <tr>
+              <td>Connectors</td>
+              <td>power supply wire connectors, stepper motor wire connectors, V2 plug, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>49 × 147 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>70 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="step/front.jpg" alt="step, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="step/back.jpg" alt="step, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="step/inside.jpg" alt="step, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="step/side.jpg" alt="step, side" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="step/front-sink.jpg" alt="step, front with sink" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="step/side-sink.jpg" alt="step, side with sink" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div id="usb" class="subsection">
+        <h3 class="title">
+          usb
+        </h3>
+        <p class="subtitle">
+          USB to Ribbon Cable Connector
+        </p>
+        <p>
+          Connects a USB host to a device's V2 plug. It supplies the host's
+          power to the connected device. This adapter is used to update a
+          device's <a href="https://versioduo.com/download/" target="software">firmware</a> via USB.
+        </p>
+        <p>
+          The maximum length of the ribbon cable is limited by
+          the USB signal and cannot exceed a few meters. To bridge long distances,
+          a <a href="#connect">connect</a> controller can be used which uses
+          <a href="https://en.wikipedia.org/wiki/RS-422" target="wiki">RS422</a>
+          serial connections instead of USB.
+        </p>
+        <table class="table is-fullwidth is-striped is-narrow">
+          <tbody>
+            <tr>
+              <td>Connectors</td>
+              <td>USB-C, V2 socket</td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>56 × 18 × 8 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>10 g</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="usb/front.jpg" alt="usb, front">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="usb/back.jpg" alt="usb, back" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="usb/inside.jpg" alt="usb, inside" loading="lazy">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="image is-4by3">
+                <img src="usb/side.jpg" alt="usb, side" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="software">
+    <div class="container">
+      <h2 class="title">
+        Software
+      </h2>
+      <p class="subtitle">
+        Source Code and Firmware Updates
+      </p>
+      <a class="button" href="https://github.com/versioduo/firmware/" target="software">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Downloads</span>
+      </a>
+      <a class="button" href="https://github.com/versioduo/" target="software">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Source Code</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="links">
+    <div class="container">
+      <h2 class="title">
+        Links
+      </h2>
+      <p class="subtitle">
+        External links to related projects or useful ressources
+      </p>
+      <a class="button" href="https://instagram.com/ubermorrow/" target="links">
+        <span class="icon">
+          <i class="fab fa-instagram"></i>
+        </span>
+        <span>Kay Sievers</span>
+      </a>
+      <a class="button" href="https://www.youtube.com/channel/UCSasQhCAfrQm1rSoA6l9oqQ" target="links">
+        <span class="icon">
+          <i class="fab fa-youtube"></i>
+        </span>
+        <span>Videos</span>
+      </a>
+      <a class="button" href="http://www.piano-midi.de/" target="links">
+        <span class="icon">
+          <i class="far fa-file-audio"></i>
+        </span>
+        <span>Classical Music MIDI Files</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="title">
+        Contact
+      </h2>
+      <p>
+        Kay Sievers
+      </p>
+      <p>
+        <a class="button" href="mailto:kay@vrfy.org">
+          <span class="icon">
+            <i class="far fa-envelope"></i>
+          </span>
+          <span>kay@vrfy.org</span>
+        </a>
+      </p>
+
+      <div lang="de" class="content is-small">
+        <h3>Warnhinweis zu Inhalten</h3>
+        <p>
+          Die kostenlosen und frei zugänglichen Inhalte dieser Webseite wurden mit
+          größtmöglicher Sorgfalt erstellt. Der Anbieter dieser Webseite übernimmt
+          jedoch keine Gewähr für die Richtigkeit und Aktualität der
+          bereitgestellten kostenlosen und frei zugänglichen journalistischen
+          Ratgeber und Nachrichten. Namentlich gekennzeichnete Beiträge geben die
+          Meinung des jeweiligen Autors und nicht immer die Meinung des Anbieters
+          wieder. Allein durch den Aufruf der kostenlosen und frei zugänglichen
+          Inhalte kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und dem
+          Anbieter zustande, insoweit fehlt es am Rechtsbindungswillen des
+          Anbieters.
+        </p>
+        <h3>Externe Links</h3>
+        <p>
+          Diese Website enthält Verknüpfungen zu Websites Dritter ("externe Links").
+          Diese Websites unterliegen der Haftung der jeweiligen Betreiber. Der
+          Anbieter hat bei der erstmaligen Verknüpfung der externen Links die fremden
+          Inhalte daraufhin überprüft, ob etwaige Rechtsverstöße bestehen. Zu dem
+          Zeitpunkt waren keine Rechtsverstöße ersichtlich. Der Anbieter hat keinerlei
+          Einfluss auf die aktuelle und zukünftige Gestaltung und auf die Inhalte der
+          verknüpften Seiten. Das Setzen von externen Links bedeutet nicht, dass sich
+          der Anbieter die hinter dem Verweis oder Link liegenden Inhalte zu Eigen
+          macht. Eine ständige Kontrolle der externen Links ist für den Anbieter ohne
+          konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Kenntnis von
+          Rechtsverstößen werden jedoch derartige externe Links unverzüglich
+          gelöscht.
+        </p>
+        <h3>Urheber- und Leistungsschutzrechte</h3>
+        <p>
+          Die auf dieser Website veröffentlichten Inhalte unterliegen dem
+          deutschen Urheber- und Leistungsschutzrecht. Jede vom deutschen Urheber-
+          und Leistungsschutzrecht nicht zugelassene Verwertung bedarf der
+          vorherigen schriftlichen Zustimmung des Anbieters oder jeweiligen
+          Rechteinhabers. Dies gilt insbesondere für Vervielfältigung,
+          Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe
+          von Inhalten in Datenbanken oder anderen elektronischen Medien und
+          Systemen. Inhalte und Rechte Dritter sind dabei als solche
+          gekennzeichnet. Die unerlaubte Vervielfältigung oder Weitergabe
+          einzelner Inhalte oder kompletter Seiten ist nicht gestattet und
+          strafbar. Lediglich die Herstellung von Kopien und Downloads für den
+          persönlichen, privaten und nicht kommerziellen Gebrauch ist erlaubt.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>
+    'use strict';
+
+    const burger = document.querySelector('.navbar-burger');
+    const menu = document.querySelector('.navbar-menu');
+
+    // Toggle menu with burger.
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+    });
+
+    window.addEventListener('click', (e) => {
+      // Do not act on the burger toggle event.
+      if (e.target == burger)
+        return;
+
+      if (!burger.classList.contains('is-active'))
+        return;
+
+      burger.classList.remove('is-active');
+      menu.classList.remove('is-active');
+    });
+
+    for (const e of document.querySelectorAll('.swiper-container')) {
+      new Swiper(e, {
+        speed: 750,
+        loop: true,
+        spaceBetween: 24,
+        preloadImages: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

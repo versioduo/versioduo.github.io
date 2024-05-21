@@ -271,7 +271,7 @@
             <tbody>
               <tr>
                 <td>Connectors</td>
-                <td>Power Supply, USB-C, MIDI (TRS 2.5 mm)</td>
+                <td>Power Supply, USB-C, MIDI In (TRS 2.5 mm)</td>
               </tr>
               <tr>
                 <td>Power Supply</td>
@@ -779,7 +779,7 @@
             <tbody>
               <tr>
                 <td>Connectors</td>
-                <td>USB-C, MIDI (TRS 2.5 mm)</td>
+                <td>USB-C, MIDI In (TRS 2.5 mm)</td>
               </tr>
               <tr>
                 <td>Power Supply</td>
@@ -978,7 +978,7 @@
               </tr>
               <tr>
                 <td>Connectors</td>
-                <td>Power Supply wire connectors (WAGO), LED wire connectors (WAGO), USB-C, MIDI (TRS 2.5 mm), V2Link Socket (IDC 1.27 mm)</td>
+                <td>Power Supply wire connectors (WAGO), LED wire connectors (WAGO), USB-C, MIDI In (TRS 2.5 mm), V2Link Socket (IDC 1.27 mm)</td>
               </tr>
               <tr>
                 <td>Dimensions</td>
@@ -1031,7 +1031,11 @@
             16 Channels Analog Expression Controller
           </p>
           <p>
-            It samples analog input from expression pedals or hall sensors and sends notes and control change messages.
+            It samples the analog input signal from potentiometers, expression pedals, hall sensors or similar. It
+            sends MIDI control change messages, and synthesizes notes with velocity according to the measured speed
+            of change in the input signal.
+
+            The TRS connection supplies 3.3 V which can be used to power the sensors.
           </p>
           <table class="table is-fullwidth is-striped is-narrow">
             <tbody>
@@ -1041,7 +1045,7 @@
               </tr>
               <tr>
                 <td>Connectors</td>
-                <td>USB-C, MIDI (TRS 2.5 mm), Input (TRS 2.5 mm)</td>
+                <td>USB-C, MIDI Out (TRS 2.5 mm), Input (TRS 2.5 mm)</td>
               </tr>
               <tr>
                 <td>Dimensions</td>

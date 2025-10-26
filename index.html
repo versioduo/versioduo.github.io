@@ -2,13 +2,13 @@
 <html lang="en">
 
   <head>
-    <meta name="revised" content="2023-10-03">
-    <meta name="copyright" content="Kay Sievers, kay@versioduo.com">
+    <meta name="revised" content="2025-010-26">
+    <meta name="copyright" content="Anyone can use this public domain work without having to seek authorisation, no one can ever own it.">
     <meta name="rating" content="safe for kids">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>Versio Duo – Software and Electronics for Musical Devices</title>
     <meta name="description" content="Building blocks for musical instruments, analog sound for digital notes.">
-    <meta name="keywords" content="Acoustic Robots, Musical Robots, MIDI, Musical Instruments, Electronics, Software">
+    <meta name="keywords" content="Acoustic Robots, Musical Robots, MIDI, Musical Instruments">
     <link rel="canonical" href="https://versioduo.com/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="black">
@@ -106,7 +106,7 @@
     </style>
   </head>
 
-  <body class="has-navbar-fixed-top">
+  <body class="has-navbar-fixed-top" data-theme="light">
     <nav class="navbar is-fixed-top is-black" aria-label="navigation">
       <div class="container">
         <div class="navbar-brand">
@@ -175,6 +175,9 @@
               <div class="navbar-dropdown">
                 <a class="navbar-item" href="#control">
                   V2 control
+                </a>
+                <a class="navbar-item" href="#express">
+                  V2 express
                 </a>
                 <a class="navbar-item" href="#pulse">
                   V2 pulse
@@ -268,7 +271,7 @@
             <tbody>
               <tr>
                 <td>Connectors</td>
-                <td>Power Supply, USB-C, MIDI (TRS 2.5 mm)</td>
+                <td>Power Supply, USB-C, MIDI In (TRS 2.5 mm)</td>
               </tr>
               <tr>
                 <td>Power Supply</td>
@@ -776,7 +779,7 @@
             <tbody>
               <tr>
                 <td>Connectors</td>
-                <td>USB-C, MIDI (TRS 2.5 mm)</td>
+                <td>USB-C, MIDI In (TRS 2.5 mm)</td>
               </tr>
               <tr>
                 <td>Power Supply</td>
@@ -934,16 +937,15 @@
         </p>
         <p>
           V2 devices are connected via a bi-directional full-duplex
-          <a href="https://en.wikipedia.org/wiki/Low-voltage_differential_signaling" target="wiki">LVDS</a> serial connection.
-          The connectors are called <i>V2Link Plug</i> and <i>V2Link Socket</i>.
-          Additional wires supply power to the devices and connect the
-          microcontroller's USB port to a USB host.
+          <a href="https://en.wikipedia.org/wiki/RS-422" target="wiki">RS-422</a> serial connection.
+          The connectors are called <i>Plug</i> and <i>Socket</i>. Additional wires might supply
+          power and connect microcontroller's USB port to a USB host.
         </p>
         <p>
-          V2 devices are daisy-chained, a child device's <i>V2Link Plug</i> is
-          connected to the parent device's <i>V2Link Socket</i>. The V2 wire protocol
+          V2 devices are daisy-chained, a child device's <i> Plug</i> is
+          connected to the parent device's <i>Socket</i>. The wire protocol
           carries the address of the device it talks to, the parent devices
-          forward the messages.
+          forward the messages to the host.
         </p>
         <p>
           V2 devices are <a href="https://versioduo.com/configure/" target="software">configured</a> with a web browser.
@@ -975,7 +977,7 @@
               </tr>
               <tr>
                 <td>Connectors</td>
-                <td>Power Supply wire connectors (WAGO), LED wire connectors (WAGO), USB-C, MIDI (TRS 2.5 mm), V2Link Socket (IDC 1.27 mm)</td>
+                <td>Power Supply wire connectors (WAGO), LED wire connectors (WAGO), USB-C, MIDI In (TRS 2.5 mm), V2Link Socket (IDC 1.27 mm)</td>
               </tr>
               <tr>
                 <td>Dimensions</td>
@@ -1011,6 +1013,73 @@
               <div class="swiper-slide">
                 <figure class="swiper-zoom-container image is-4by3">
                   <img src="control/top.jpg" alt="control, top view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="express" class="subsection">
+          <h3 class="title">
+            V2 express
+          </h3>
+          <p class="subtitle">
+            16 Channels Analog Expression Controller
+          </p>
+          <p>
+            It samples the analog input signal from potentiometers, expression pedals, hall sensors or similar. It
+            sends MIDI control change messages, and synthesizes notes with velocity according to the measured speed
+            of change in the input signal.
+
+            The TRS connection supplies 3.3 V which can be used to power the sensors.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Power Supply</td>
+                <td>USB 5 V</td>
+              </tr>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C, MIDI Out (TRS 2.5 mm), Input (TRS 2.5 mm)</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>180 × 35 × 8 mm / 53 g</td>
+              </tr>
+              <tr>
+                <td>Web Configuration</td>
+                <td><a href="https://versioduo.com/configure/" target="configure">versioduo.com/configure</a></td>
+              </tr>
+              <tr>
+                <td>KiCad</td>
+                <td><a href="https://github.com/versioduo/express-hardware" target="kicad">github.com/versioduo/express-hardware</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/front.jpg" alt="express, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/inside.jpg" alt="express, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/back.jpg" alt="express, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/top.jpg" alt="express, top view" loading="lazy">
                 </figure>
               </div>
             </div>

@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'DIN 1451';
+  src: url('../webfonts/AlteDIN1451Mittelschrift.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome Solid';
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Font Awesome Brands';
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+i.icon {
+  font-size: 85%;
+  font-style: normal;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  &.--microchip:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f2db';
+  }
+
+  &.--magnifying-glass-chart:before {
+    font-family: 'Font Awesome Solid';
+    content: '\e522';
+  }
+
+  &.--computer:before {
+    font-family: 'Font Awesome Solid';
+    content: '\e4e5';
+  }
+
+  &.--book-open-reader:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f5da';
+  }
+
+  &.--screwdriver-wrench:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f7d9';
+  }
+
+  &.--file-code:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f1c9';
+  }
+
+  &.--music:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f001';
+  }
+
+  &.--sliders:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f1de';
+  }
+
+  &.--plug:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f1e6';
+  }
+
+  &.--link:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f0c1';
+  }
+
+  &.--envelope:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f0e0';
+  }
+
+  &.--bars:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f0c9';
+  }
+
+  &.--xmark:before {
+    font-family: 'Font Awesome Solid';
+    content: '\f00d';
+  }
+
+  &.--github:before {
+    font-family: 'Font Awesome Brands';
+    content: '\f09b';
+  }
+
+  &.--mastodon:before {
+    font-family: 'Font Awesome Brands';
+    content: '\f4f6';
+  }
+
+  &.--instagram:before {
+    font-family: 'Font Awesome Brands';
+    content: '\f16d';
+  }
+
+  &.--youtube:before {
+    font-family: 'Font Awesome Brands';
+    content: '\f167';
+  }
+}

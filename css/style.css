@@ -1,0 +1,312 @@
+:root {
+  color-scheme: light dark;
+  --colour: light-dark(hsl(35deg, 8%, 2%), hsl(190deg 8% 96%));
+  --colour-background: light-dark(hsl(from var(--colour) h s 98%), hsl(from var(--colour) h s 12%));
+  --colour-background-section: light-dark(hsl(from var(--colour-background) calc(h - 10) s calc(l - 6)), hsl(from var(--colour-background) calc(h + 10) s calc(l + 10)));
+  --colour-background-card: light-dark(hsl(from var(--colour-background) calc(h - 20) s calc(l - 12)), hsl(from var(--colour-background) calc(h + 20) s calc(l + 20)));
+  --colour-link: light-dark(hsl(220deg 50% 75%), hsl(220deg 50% 25%));
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'DIN 1451', sans-serif;
+  color: var(--colour);
+  background-color: var(--colour-background);
+  scroll-padding-top: 2.5rem;
+  scroll-behavior: smooth;
+  hyphens: auto;
+
+  a {
+    color: var(--colour);
+  }
+
+  ul,
+  menu {
+    list-style: none;
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: hsl(from var(--colour-background) h s l / 85%);
+    backdrop-filter: blur(0.25rem);
+    z-index: 1;
+
+    a {
+      text-decoration: none;
+    }
+
+    >input {
+      position: fixed;
+      appearance: none;
+
+      &:checked~label {
+        >i {
+          &:first-child {
+            display: none;
+          }
+
+          &:last-child {
+            display: inline;
+          }
+        }
+      }
+
+      &:checked~ul {
+        display: flex;
+      }
+    }
+
+    >label {
+      position: fixed;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 1.5rem;
+
+      >i:last-child {
+        display: none;
+      }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.5rem 0.25rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    >ul {
+      flex-wrap: wrap;
+      display: none;
+      max-height: 85vh;
+      overflow-y: auto;
+
+      a:hover {
+        background-color: var(--colour-link);
+        border-radius: 1rem;
+      }
+
+      >li {
+        flex: 1 1 0%;
+
+        >ul {
+          font-size: 0.75rem;
+        }
+
+        @media all and (max-width: 60rem) {
+          & {
+            flex-basis: 50%;
+          }
+        }
+
+        @media all and (max-width: 40rem) {
+          & {
+            flex-basis: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    padding-top: 2.75rem;
+    padding-left: 0.5rem;
+    display: grid;
+    gap: 1rem;
+
+    ul.pages {
+      column-count: 3;
+      padding-bottom: 0.5rem;
+
+      p {
+        padding-top: 0.25rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.75rem;
+      }
+
+      @media all and (max-width: 60rem) {
+        & {
+          column-count: 2;
+
+        }
+      }
+
+      @media all and (max-width: 40rem) {
+        & {
+          column-count: auto;
+        }
+      }
+    }
+
+    >section {
+      padding-left: 0.5rem;
+      background-color: var(--colour-background-section);
+      border-top-left-radius: 1rem;
+      box-shadow: hsl(0 0 40% / 10%) -0.1rem 0.1rem 0.2rem;
+      width: 100%;
+
+      >hgroup {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        text-align: center;
+
+        >h2 {
+          padding-bottom: 0.25rem;
+          font-size: 1.25rem;
+          font-weight: 400;
+        }
+
+        >p {
+          font-size: 0.75rem;
+        }
+      }
+
+      p {
+        padding-bottom: 0.75rem;
+        font-size: 0.75rem;
+      }
+
+      >ul.card {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+
+        @media all and (max-width: 60rem) {
+          & {
+            grid-template-columns: auto auto;
+          }
+        }
+
+        @media all and (max-width: 40rem) {
+          & {
+            grid-template-columns: auto;
+          }
+        }
+
+        >li {
+          padding-top: 1rem;
+          padding-left: 0.5rem;
+          background-color: var(--colour-background-card);
+          border-top-left-radius: 1rem;
+          box-shadow: hsl(0 0 40% / 10%) -0.1rem 0.1rem 0.2rem;
+
+          >hgroup {
+            padding-bottom: 1rem;
+            text-align: center;
+
+            >h3 {
+              padding-bottom: 0.25rem;
+              font-weight: 400;
+            }
+
+            >p {
+              font-size: 0.75rem;
+            }
+          }
+
+          >p {
+            padding-right: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 0.75rem;
+          }
+
+          >table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            font-size: 0.75rem;
+
+            >tbody {
+              >tr {
+                box-sizing: border-box;
+                border-bottom: 0.05rem solid hsl(from var(--colour) h s l / 20%);
+
+                >td {
+                  padding-top: 0.25rem;
+                  padding-bottom: 0.25rem;
+                  padding-right: 0.5rem;
+                  vertical-align: top;
+                }
+              }
+            }
+          }
+
+          >ul.carousel {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scroll-marker-group: before;
+
+            &::scroll-marker-group {
+              position: absolute;
+              justify-self: center;
+              padding-top: 1rem;
+
+              display: flex;
+              justify-content: center;
+              gap: 0.5rem;
+            }
+
+            >li {
+              flex: 0 0 100%;
+              scroll-snap-align: center;
+
+              &::scroll-marker {
+                content: "";
+                width: 0.75rem;
+                height: 0.75rem;
+                background-color: var(--colour-background-card);
+                opacity: 25%;
+                border: 0.1rem solid white;
+                border-radius: 50%;
+                overflow: hidden;
+              }
+
+              &::scroll-marker:target-current {
+                opacity: 50%;
+              }
+
+              >img {
+                vertical-align: bottom;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      menu {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      >address {
+        font-size: 0.75rem;
+        font-style: normal;
+        text-align: center;
+
+        >p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'DIN 1451';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url('../webfonts/AlteDIN1451Mittelschrift.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+.fa-solid {
+  font-family: 'Font Awesome';
+}
+
+.fa-envelope {
+  --fa: "\f0e0"
+}
+
+@font-face {
+  font-family: 'Font Awesome Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fa-brands {
+  font-family: 'Font Awesome Brands';
+}
+
+.fa-github {
+  --fa: "\f09b"
+}
+
+
+.fa-mastodon {
+  --fa: "\f4f6"
+}
+
+.fa-instagram {
+  --fa: "\f16d"
+}
+
+.fa-youtube {
+  --fa: "\f167"
+}
+
+:is(.fa-regular, .fa-solid, .fa-brands, .fa):before {
+  font-feature-settings: normal;
+  font-style: normal;
+  content: var(--fa)/""
+}

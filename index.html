@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="revised" content="2026-01-16">
+    <meta name="copyright" content="Anyone can use this public domain work without having to seek authorisation, no one can ever own it.">
+    <meta name="rating" content="safe for kids">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Versio Duo – Quaedam desideria insatiata manere debent</title>
+    <meta name="description" content="Analog Sound for Digital Notes.">
+    <meta name="keywords" content="Acoustic Robots, Musical Robots, MIDI">
+    <link rel="canonical" href="https://versioduo.com/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="icons/logo-black.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="icons/logo.svg" media="(prefers-color-scheme: dark)">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <meta property="og:url" content="https://versioduo.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Versio Duo">
+    <meta property="og:description" content="Building blocks for musical instruments">
+    <meta property="og:image" content="https://versioduo.com/top/instruments.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Versio Duo",
+      "url": "https://versioduo.com",
+      "description": "Building blocks for musical instruments",
+      "logo": "https://versioduo.com/icons/logo-boxed.png",
+      "image": "https://versioduo.com/top/instruments.jpg"
+    }
+  </script>
+    <style>
+      html {
+        background-color: black;
+        scroll-padding-top: 3.25rem;
+        scroll-behavior: smooth;
+        hyphens: auto;
+      }
+
+      body {
+        font-family: 'DIN 1451', sans-serif;
+        color: hsl(0, 0%, 21%);
+      }
+
+      .inactive {
+        pointer-events: none;
+      }
+
+      /* Do not mess with the DIN font, fake bold looks really ugly */
+      .title {
+        font-weight: 400;
+      }
+
+      .navbar {
+        opacity: 95%;
+      }
+
+      section {
+        background-color: hsl(0, 0%, 92%);
+        padding: 1rem;
+      }
+
+      section:not(:first-of-type) {
+        margin-top: 0.25rem;
+      }
+
+      .subsection {
+        background-color: white;
+        margin: -1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+
+      hr {
+        background-color: hsl(0, 0%, 50%);
+      }
+
+      .table.is-narrow td {
+        padding-left: 0;
+      }
+
+      p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next,
+      .swiper-pagination-bullet-active {
+        opacity: 0.7;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: hsl(0, 0%, 10%);
+      }
+    </style>
+  </head>
+
+  <body class="has-navbar-fixed-top" data-theme="light">
+    <nav class="navbar is-fixed-top is-black" aria-label="navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-home navbar-item is-size-4 pl-4" href="#">
+            <img src="icons/logo.svg" alt="" style="width: auto; height: 1.5rem;">
+            <h1 class="ml-2">
+              Versio Duo
+            </h1>
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span class="inactive" aria-hidden="true"></span>
+            <span class="inactive" aria-hidden="true"></span>
+            <span class="inactive" aria-hidden="true"></span>
+            <span class="inactive" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless" href="#instruments">
+                Instruments
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="#glockenspiel-37">
+                  V2 glockenspiel-37
+                </a>
+                <a class="navbar-item" href="#hihat">
+                  V2 hihat
+                </a>
+                <a class="navbar-item" href="#kontra-2">
+                  V2 kontra-2
+                </a>
+                <a class="navbar-item" href="#schlag-7">
+                  V2 schlag-7
+                </a>
+                <a class="navbar-item" href="#viola-1">
+                  V2 viola-1
+                </a>
+                <a class="navbar-item" href="#pi-14537">
+                  pi-14537
+                </a>
+              </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless" href="#devices">
+                Devices
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="#axis">
+                  V2 axis
+                </a>
+                <a class="navbar-item" href="#beat">
+                  V2 beat
+                </a>
+                <a class="navbar-item" href="#cube">
+                  V2 cube
+                </a>
+                <a class="navbar-item" href="#dmx">
+                  V2 dmx
+                </a>
+              </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless" href="#electronics">
+                Electronics
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="#control">
+                  V2 control
+                </a>
+                <a class="navbar-item" href="#drum">
+                  V2 drum
+                </a>
+                <a class="navbar-item" href="#express">
+                  V2 express
+                </a>
+                <a class="navbar-item" href="#pulse">
+                  V2 pulse
+                </a>
+                <a class="navbar-item" href="#wave">
+                  V2 wave
+                </a>
+              </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless" href="#software">
+                Software
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="https://github.com/versioduo/download" target="software">
+                  Firmware Updates
+                </a>
+                <a class="navbar-item" href="https://github.com/versioduo/" target="software">
+                  Source Code
+                </a>
+              </div>
+            </div>
+
+            <a class="navbar-item" href="#links">
+              Links
+            </a>
+
+            <a class="navbar-item" href="#contact">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="#" class="is-paddingless has-background-white">
+      <div class="container">
+        <h2 class="is-hidden">
+          Pictures
+        </h2>
+        <div class="swiper" data-swiper-autoplay="2000">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="swiper-zoom-container image is-4by3">
+                <img src="top/instruments.jpg" alt="instruments">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="swiper-zoom-container image is-4by3">
+                <img src="top/viola-8.jpg" alt="8 viola">
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="swiper-zoom-container image is-4by3">
+                <img src="top/pi-14537.jpg" alt="pi-14537">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instruments">
+      <div class="container">
+        <h2 class="title">
+          Instruments
+        </h2>
+        <p class="subtitle">
+          Acoustic MIDI Devices
+        </p>
+
+        <div id="glockenspiel-37" class="subsection">
+          <h3 class="title">
+            V2 glockenspiel-37
+          </h3>
+          <p class="subtitle">
+            37 Bars Glockenspiel
+          </p>
+          <p>
+            Notes are controlled by a trigger and a damper, it allows a piano-like
+            velocity and tone duration control; MIDI Note-Off will cause the
+            currently playing tone to be damped. One RGB LED per note visualizes
+            the playing notes. Uses five <a href="#pulse">pulse</a> devices
+            and one <a href="#control">control</a> device.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>Power Supply, USB-C, MIDI In (TRS 2.5 mm)</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>24 V, 150 W</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>120 × 23 × 14 cm / 9.5 kg</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="glockenspiel-37/front.jpg" alt="glockenspiel-37, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="glockenspiel-37/top.jpg" alt="glockenspiel-37, top view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="glockenspiel-37/back.jpg" alt="glockenspiel-37, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="glockenspiel-37/side.jpg" alt="glockenspiel-37, side view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="columns mt-3">
+            <div class="column">
+              <figure class="image is-16by9">
+                <iframe class="has-ratio" srcdoc="
+                <link rel='stylesheet' href='css/iframe.css'>
+                <a href='https://www.youtube-nocookie.com/embed/rZ-tn6zFN2k?modestbranding=1&rel=0&autoplay=1'>
+                  <img src='glockenspiel-37/video.jpg' alt='glockenspiel-37 video'>
+                  <span class='service'>▶ YouTube</span>
+                </a>
+                <span class='title'>V2 glockenspiel-37</span>
+                <span class='description'>The video will be played from an external service.</span>" allowfullscreen title="glockenspiel-37">
+                </iframe>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image is-16by9">
+                <iframe class="has-ratio" srcdoc="
+                <link rel='stylesheet' href='css/iframe.css'>
+                <a href='https://www.youtube-nocookie.com/embed/KzzmGwGQEmo?modestbranding=1&rel=0&autoplay=1'>
+                  <img src='glockenspiel-37/video.jpg' alt='glockenspiel-37 dampened mode video'>
+                  <span class='service'>▶ YouTube</span>
+                </a>
+                <span class='title'>V2 glockenspiel-37 – Mode Dampened</span>
+                <span class='description'>The video will be played from an external service.</span>" allowfullscreen title="glockenspiel-37">
+                </iframe>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image is-16by9">
+                <iframe class="has-ratio" srcdoc="
+                <link rel='stylesheet' href='css/iframe.css'>
+                <a href='https://www.youtube-nocookie.com/embed/LaIWTMhsH8I?modestbranding=1&rel=0&autoplay=1'>
+                  <img src='glockenspiel-37/video.jpg' alt='glockenspiel-37 damper mode video'>
+                  <span class='service'>▶ YouTube</span>
+                </a>
+                <span class='title'>V2 glockenspiel-37 – Mode Damper</span>
+                <span class='description'>The video will be played from an external service.</span>" allowfullscreen title="glockenspiel-37">
+                </iframe>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="hihat" class="subsection">
+          <h3 class="title">
+            V2 hihat
+          </h3>
+          <p class="subtitle">
+            Hi Hat
+          </p>
+          <p>
+            Motorized cymbals with wooden and felt trigger. Uses a <a href="#drum">drum</a> controller.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C, V2Link Plug (RJ45). V2Link Socket (RJ45)</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>Passive PoE, Mode B, 24 V</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>33 × 23 × 7 cm / 3.6 kg</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="hihat/front.jpg" alt="hihat, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="hihat/side.jpg" alt="hihat, side view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="hihat/controller.jpg" alt="hihat, controller view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+
+        <div id="kontra-2" class="subsection">
+          <h3 class="title">
+            V2 kontra-2
+          </h3>
+          <p class="subtitle">
+            2 Strings Double Bass
+          </p>
+          <p>
+            Uses two <a href="#step">step</a> controllers
+            and a <a href="#control">control</a> device.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>Mains Power (CEE 7/7), USB-B</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>24 V, 120 W</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>60 x 191 × 52 cm / 39 kg</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="kontra-2/front.jpg" alt="kontra-2, front">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="kontra-2/side.jpg" alt="kontra-2, side" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="kontra-2/back.jpg" alt="kontra-2, back" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="kontra-2/rail.jpg" alt="kontra-2, rail" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="kontra-2/strings.jpg" alt="kontra-2, strings" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="kontra-2/wheels.jpg" alt="kontra-2, wheels" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="kontra-2/driver.jpg" alt="kontra-2, driver" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="schlag-7" class="subsection">
+          <h3 class="title">
+            V2 schlag-7
+          </h3>
+          <p class="subtitle">
+            Drum Set
+          </p>
+          <p>
+            Uses one <a href="#step">step</a> controller, one <a href="#pulse">pulse</a> controller,
+            and one <a href="#control">control</a> device.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>Mains Power (CEE 7/7), USB-B</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>24 V, 120 W</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>55 x 155 × 73 cm / 40 kg</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="schlag-7/front-l.jpg" alt="schlag-7, front left">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="schlag-7/front-r.jpg" alt="schlag-7, front right" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="schlag-7/hi-hat.jpg" alt="schlag-7, hi-hat" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="schlag-7/snare.jpg" alt="schlag-7, snare" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="schlag-7/brush.jpg" alt="schlag-7, brush" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="schlag-7/control.jpg" alt="schlag-7, controller" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="schlag-7/kick.jpg" alt="schlag-7, kick drum" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="viola-1" class="subsection">
+          <h3 class="title">
+            V2 viola-1
+          </h3>
+          <p class="subtitle">
+            1 String Circular Bow
+          </p>
+          <p>
+            Uses one <a href="#step">step</a> device.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>Mains Power (TRUE1), USB-B, V2Link Plug (RJ45). V2Link Socket (RJ45)</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>24 V, 60 W</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>43 × 43 × 89 cm / 8.5 kg</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="viola-1/front.jpg" alt="viola-1, front">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="viola-1/side.jpg" alt="viola-1, side" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="viola-1/back.jpg" alt="viola-1, back" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="viola-1/top.jpg" alt="viola-1, top" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="pi-14537" class="subsection">
+          <h3 class="title">
+            pi-14537
+          </h3>
+          <p class="subtitle">
+            Hammerklavier
+          </p>
+          <p>
+            Built with <a href="https://studiovogelkuerstner.de/">Thomas Kürstner</a>. Uses ten <a href="#pulse">pulse</a> devices
+            and one <a href="#control">control</a> device.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>Power Supply, V2Link Plug (USB connection)</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>24 V, 320 W</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>140 x 115 × 40 cm / 130 kg</td>
+              </tr>
+            </tbody>
+          </table>
+          <figure class="swiper-zoom-container image is-4by3">
+            <img src="pi-14537/front.jpg" alt="pi-14357, front">
+          </figure>
+          <div class="columns mt-3">
+            <div class="column">
+              <figure class="image is-16by9">
+                <iframe class="has-ratio" srcdoc="
+            <link rel='stylesheet' href='css/iframe.css'>
+            <a href='https://www.youtube-nocookie.com/embed/3VsnD0hq7V0?modestbranding=1&rel=0&autoplay=1'>
+              <img src='pi-14537/video-1.png' alt='pi-14537 video'>
+              <span class='service'>▶ YouTube</span>
+            </a>
+            <span class='title'>electronic piano etude 1</span>
+            <span class='description'>The video will be played from an external service.</span>" allowfullscreen title="pi-14537">
+                </iframe>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image is-16by9">
+                <iframe class="has-ratio" srcdoc="
+            <link rel='stylesheet' href='css/iframe.css'>
+            <a href='https://www.youtube-nocookie.com/embed/TEnAYTdsSFw?modestbranding=1&rel=0&autoplay=1'>
+              <img src='pi-14537/video-2.png' alt='pi-14537 video'>
+              <span class='service'>▶ YouTube</span>
+            </a>
+            <span class='title'>a quiet electronic piano dance for conlon nancarrow</span>
+            <span class='description'>The video will be played from an external service.</span>" allowfullscreen title="pi-14537">
+                </iframe>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="devices">
+      <div class="container">
+        <h2 class="title">
+          Devices
+        </h2>
+        <p class="subtitle">
+          MIDI instruments, controllers, bridges
+        </p>
+
+        <div id="axis" class="subsection">
+          <h3 class="title">
+            V2 axis
+          </h3>
+          <p class="subtitle">
+            Orientation Sensor Controller
+          </p>
+          <p>
+            Sends MIDI Control Change messages with Quaternion and Euler orientation, and accelerometer
+            data. The device can be mounted at any orientation or angle, and calibrated to align its axes
+            and set to zero position.</p>
+          <table class=" table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Power Supply</td>
+                <td>USB 5 V</td>
+              </tr>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>64 × 18 × 8 mm / 12 g</td>
+              </tr>
+              <tr>
+                <td>Web 3D Cube Test</td>
+                <td><a href="https://versioduo.com/axis3d/" target="axis3D">versioduo.com/axis3d</a></td>
+              </tr>
+              <tr>
+                <td>Web Configuration</td>
+                <td><a href="https://versioduo.com/configure/" target="configure">versioduo.com/configure</a></td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td><a href="https://github.com/versioduo/axis" target="source">github.com/versioduo/axis</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="axis/front.jpg" alt="axis, front view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="axis/inside.jpg" alt="axis, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="axis/back.jpg" alt="axis, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="axis/top.jpg" alt="axis, top view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="cube" class="subsection">
+          <h3 class="title">
+            V2 cube
+          </h3>
+          <p class="subtitle">
+            Synthesizer with Class-D Power Amplifier
+          </p>
+          <table class=" table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C, V2Link Plug (RJ45). V2Link Socket (RJ45)</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>Passive PoE, Mode B, 24 V</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>300 × 300 × 300 mm / 7.5 kg</td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td><a href="https://github.com/versioduo/cube" target="github">github.com/versioduo/cube</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="cube/front.jpg" alt="cube, front view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="cube/back.jpg" alt="cube, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="cube/inside.jpg" alt="cube, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="cube/grill.jpg" alt="cube, grill view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="beat" class="subsection">
+          <h3 class="title">
+            V2 beat
+          </h3>
+          <p class="subtitle">
+            Miniature Drum Set
+          </p>
+          <p>
+            Portable 4 channels intelligent MIDI-solenoid driver. Small solenoids with 3 – 15 Ω
+            resistance (a 3 V version is typically ~7 Ω) are driven by 5 V USB power, scaled with a
+            50 kHz PWM signal. The maximum current draw is limited to ~3 A.
+          </p>
+          <p>
+            Beat was developed for a <a href="https://www.campfr.com/onsite/barker" target="camp"><i>Camp</i></a>
+            workshop with <a href="https://www.voltek-labs.net" target="voltek">Sam Barker</a>, taking place in the
+            French Pyrenees in August 2023.
+          </p>
+          <table class=" table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C, MIDI In (TRS 2.5 mm)</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>USB power, 5 V</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>118 × 87 × 23 mm / 245 g</td>
+              </tr>
+              <tr>
+                <td>Dimensions Controller</td>
+                <td>60 × 35 × 8 mm / 20 g</td>
+              </tr>
+              <tr>
+                <td>Web Configuration</td>
+                <td><a href="https://versioduo.com/configure/" target="configure">versioduo.com/configure</a></td>
+              </tr>
+              <tr>
+                <td>Web Sequencer</td>
+                <td><a href="https://versioduo.com/sequencer/" target="sequencer">versioduo.com/sequencer</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/overview.jpg" alt="beat, overview" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/front.jpg" alt="beat, front side" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/inside.jpg" alt="beat, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/back.jpg" alt="beat, back side" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/top.jpg" alt="beat, top view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/box-motors.jpg" alt="beat, motors in box" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/box-controller.jpg" alt="beat, controller in box" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="beat/parts.jpg" alt="beat, parts" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="dmx" class="subsection">
+          <h3 class="title">
+            V2 dmx
+          </h3>
+          <p class="subtitle">
+            MIDI DMX Bridge
+          </p>
+          <p>
+            The <a href="https://github.com/versioduo/dmx/" target="software">device</a> is
+            <a href="https://versioduo.com/configure/">configured</a> with a web browser.
+          </p>
+          <table class=" table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Power Supply</td>
+                <td>USB 5 V</td>
+              </tr>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C, DMX (TRS 2.5 mm)</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>66 × 18 × 8 mm / 13 g</td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td><a href="https://github.com/versioduo/dmx" target="source">github.com/versioduo/dmx</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="dmx/adapter.jpg" alt="dmx, with adapter" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="dmx/front.jpg" alt="dmx, front view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="dmx/inside.jpg" alt="dmx, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="dmx/back.jpg" alt="dmx, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="dmx/top.jpg" alt="dmx, top view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="electronics">
+      <div class="container">
+        <h2 class="title">
+          Electronics
+        </h2>
+        <p class="subtitle">
+          Building Blocks for Musical Devices
+        </p>
+        <p>
+          V2 devices are connected via a bi-directional full-duplex
+          <a href="https://en.wikipedia.org/wiki/RS-422" target="wiki">RS-422</a> serial connection.
+          The connectors are called <i>Plug</i> and <i>Socket</i>. Additional wires might supply
+          power and connect microcontroller's USB port to a USB host.
+        </p>
+        <p>
+          V2 devices are daisy-chained, a child device's <i> Plug</i> is
+          connected to the parent device's <i>Socket</i>. The wire protocol
+          carries the address of the device it talks to, the parent devices
+          forward the messages to the host.
+        </p>
+        <p>
+          V2 devices are <a href="https://versioduo.com/configure/" target="software">configured</a> with a web browser.
+          The <a href="https://versioduo.com/download/" target="software">firmware</a> is
+          <a href="https://github.com/versioduo/configure#firmware-update" target="software">updated</a>
+          using the web interface.
+        </p>
+
+        <div id="control" class="subsection">
+          <h3 class="title">
+            V2 control
+          </h3>
+          <p class="subtitle">
+            Instrument Controller
+          </p>
+          <p>
+            Its firmware provides the instrument specific logic. It connects the children devices like <a href="#pulse">pulse</a> or <a href="#step">step</a>.
+            It supplies 5 V power to the connected devices, and can drive an RGB LED strip.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Power Supply</td>
+                <td>6 – 36 V</td>
+              </tr>
+              <tr>
+                <td>LED strip</td>
+                <td>5 V / 2 A</td>
+              </tr>
+              <tr>
+                <td>Connectors</td>
+                <td>Power Supply wire connectors (WAGO), LED wire connectors (WAGO), USB-C, MIDI In (TRS 2.5 mm), V2Link Socket (IDC 1.27 mm)</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>60 × 35 × 8 mm / 19 g</td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td><a href="https://github.com/versioduo/control" target="source">github.com/versioduo/control</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="control/front.jpg" alt="control, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="control/inside.jpg" alt="control, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="control/back.jpg" alt="control, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="control/top.jpg" alt="control, top view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="drum" class="subsection">
+          <h3 class="title">
+            V2 drum
+          </h3>
+          <p class="subtitle">
+            Percussion Controller with step and pulse driver
+          </p>
+          <p>
+            Its firmware provides the instrument specific logic, drives one stepper motor, two solenoids, and an RGB LED strip.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C, V2Link Plug (RJ45). V2Link Socket (RJ45)</td>
+              </tr>
+              <tr>
+                <td>Power Supply</td>
+                <td>Passive PoE, Mode B, 24 V</td>
+              </tr>
+              <tr>
+                <td>LED strip</td>
+                <td>5 V / 2 A</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>70 × 70 × 29 mm / 95 g</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="drum/front.jpg" alt="drum, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="drum/inside.jpg" alt="drum, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="drum/back.jpg" alt="drum, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="drum/top.jpg" alt="drum, top view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="drum/side.jpg" alt="drum, side view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="express" class="subsection">
+          <h3 class="title">
+            V2 express
+          </h3>
+          <p class="subtitle">
+            16 Channels Analog Expression Controller
+          </p>
+          <p>
+            It samples the analog input signal from potentiometers, expression pedals, hall sensors or similar. It
+            sends MIDI control change messages, and synthesizes notes with velocity according to the measured speed
+            of change in the input signal.
+
+            The TRS connection supplies 3.3 V which can be used to power the sensors.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Power Supply</td>
+                <td>USB 5 V</td>
+              </tr>
+              <tr>
+                <td>Connectors</td>
+                <td>USB-C, MIDI Out (TRS 2.5 mm), Input (TRS 2.5 mm)</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>180 × 35 × 8 mm / 53 g</td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td><a href="https://github.com/versioduo/express" target="source">github.com/versioduo/express</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/front.jpg" alt="express, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/inside.jpg" alt="express, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/back.jpg" alt="express, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="express/top.jpg" alt="express, top view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="pulse" class="subsection">
+          <h3 class="title">
+            V2 pulse
+          </h3>
+          <p class="subtitle">
+            16 Channels Intelligent Solenoid Controller
+          </p>
+          <p>
+            Solenoid power controller which adjusts to changes in the supply voltage
+            and solenoid resistance.
+          </p>
+          <p>
+            It is driven by commands which specify the length in seconds and the
+            power in watts of a solenoid trigger impulse. A typical value for a
+            trigger of a <a href="#glockenspiel-37">glockenspiel-37</a> note is a
+            30 milliseconds and a 2.5 watts pulse. The controller calculates the
+            PWM duty cycle using the measured solenoid resistance and the supplied
+            voltage.
+          </p>
+          <p>
+            The controller constantly measures the supply voltage and solenoid
+            resistance. Changes are visualized with the channel LEDs. To protect
+            itself, it monitors the overall current it draws from the power supply
+            and isolates channels which are short-curcuit.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Channels</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <td>Input voltage</td>
+                <td>6 – 36 V</td>
+              </tr>
+              <tr>
+                <td>Maximum overall current</td>
+                <td>5 A</td>
+              </tr>
+              <tr>
+                <td>PWM frequency</td>
+                <td>20 kHz</td>
+              </tr>
+              <tr>
+                <td>Connectors</td>
+                <td>Power Supply wire connectors (WAGO), Solenoid wire connectors (WAGO), V2Link Plug (IDC 1.27 mm), V2Link Socket (IDC 1.27 mm)</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>180 × 35 × 8 mm / 72 g</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="pulse/front.jpg" alt="pulse, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="pulse/inside.jpg" alt="pulse, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="pulse/back.jpg" alt="pulse, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="pulse/top.jpg" alt="pulse, top view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div id="wave" class="subsection">
+          <h3 class="title">
+            V2 wave
+          </h3>
+          <p class="subtitle">
+            Wave Synthesizer Class-D Amplifier
+          </p>
+          <p>
+            Infineon / Merus MA12070P, 2 × 80 W audio amplifier. Wave generation / synthesizer.
+          </p>
+          <table class="table is-fullwidth is-striped is-narrow">
+            <tbody>
+              <tr>
+                <td>Input voltage</td>
+                <td>6 – 24 V</td>
+              </tr>
+              <tr>
+                <td>Connectors</td>
+                <td>Power Supply wire connectors (WAGO), Speaker wire connectors (WAGO), V2Link Plug (IDC 1.27 mm), V2Link Socket (IDC 1.27 mm)</td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td>60 × 60 × 12 mm / 72 g</td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td><a href="https://github.com/versioduo/wave" target="github">github.com/versioduo/wave</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="wave/front.jpg" alt="pulse, front view">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="wave/inside.jpg" alt="pulse, inside view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="wave/back.jpg" alt="pulse, back view" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="swiper-zoom-container image is-4by3">
+                  <img src="wave/top.jpg" alt="pulse, top view" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="software">
+      <div class="container">
+        <h2 class="title">
+          Software
+        </h2>
+        <p class="subtitle">
+          Source Code and Firmware Updates
+        </p>
+        <a class="button" href="https://github.com/versioduo/firmware/" target="software">
+          <span class="icon">
+            <i class="fa-brands fa-github"></i>
+          </span>
+          <span>Downloads</span>
+        </a>
+        <a class="button" href="https://github.com/versioduo/" target="software">
+          <span class="icon">
+            <i class="fa-brands fa-github"></i>
+          </span>
+          <span>Source Code</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="container">
+        <h2 class="title">
+          Links
+        </h2>
+        <p class="subtitle">
+          External links to related projects or useful ressources
+        </p>
+        <a rel="me" class="button" href="https://mastodon.social/@kaysievers" target="links">
+          <span class="icon">
+            <i class="fa-brands fa-mastodon"></i>
+          </span>
+          <span>Mastodon</span>
+        </a>
+        <a class="button" href="https://instagram.com/versioduo" target="links">
+          <span class="icon">
+            <i class="fa-brands fa-instagram"></i>
+          </span>
+          <span>Instagram</span>
+        </a>
+        <a class="button" href="https://www.youtube.com/@versioduo" target="links">
+          <span class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </span>
+          <span>YouTube</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="title">
+          Contact
+        </h2>
+        <p>Kay Sievers<br>
+          Schönleinstr. 18<br>
+          10967 Berlin
+        </p>
+        <p class="buttons">
+          <a class="button" href="mailto:kay@versioduo.com">
+            <span class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <span>kay@versioduo.com</span>
+          </a>
+        </p>
+
+        <hr>
+
+        <div lang="de" class="content is-size-7">
+          <h3>Datenverarbeitung zur Übermittlung der Onlineinhalte</h3>
+          <p>
+            Zum Zweck der Übermittlung der von Ihnen aufgerufenen Webseite werden von Ihrem
+            Browser typischerweise unter anderem folgende Informationen übersandt: Ihre IP-Adresse,
+            die von Ihnen aufgerufene URL, Informationen zu dem von Ihnen verwendeten Browser
+            und Betriebssystem, die Seite von der aus Sie zu uns gelangt sind, der Zeitpunkt der Anfrage.
+          </p>
+          <h3>Externe Links</h3>
+          <p>
+            Diese Website enthält Verknüpfungen zu Websites Dritter ("externe Links"). Diese Websites
+            unterliegen der Haftung der jeweiligen Betreiber. Der Anbieter hat bei der erstmaligen
+            Verknüpfung der externen Links die fremden Inhalte daraufhin überprüft, ob etwaige
+            Rechtsverstöße bestehen. Zu dem Zeitpunkt waren keine Rechtsverstöße ersichtlich. Der
+            Anbieter hat keinerlei Einfluss auf die aktuelle und zukünftige Gestaltung und auf die
+            Inhalte der verknüpften Seiten. Das Setzen von externen Links bedeutet nicht, dass sich
+            der Anbieter die hinter dem Verweis oder Link liegenden Inhalte zu Eigen macht. Eine
+            ständige Kontrolle der externen Links ist für den Anbieter ohne konkrete Hinweise auf
+            Rechtsverstöße nicht zumutbar. Bei Kenntnis von Rechtsverstößen werden jedoch derartige
+            externe Links unverzüglich gelöscht.
+          </p>
+          <h3>Warnhinweis zu Inhalten</h3>
+          <p>
+            Die kostenlosen und frei zugänglichen Inhalte dieser Webseite wurden mit
+            größtmöglicher Sorgfalt erstellt. Der Anbieter dieser Webseite übernimmt jedoch keine
+            Gewähr für die Richtigkeit und Aktualität der bereitgestellten kostenlosen und frei
+            zugänglichen journalistischen Ratgeber und Nachrichten. Namentlich gekennzeichnete
+            Beiträge geben die Meinung des jeweiligen Autors und nicht immer die Meinung des Anbieters
+            wieder. Allein durch den Aufruf der kostenlosen und frei zugänglichen Inhalte kommt
+            keinerlei Vertragsverhältnis zwischen dem Nutzer und dem Anbieter zustande, insoweit
+            fehlt es am Rechtsbindungswillen des Anbieters.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      'use strict';
+
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('.navbar-menu');
+
+      // Toggle menu with burger.
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+
+      window.addEventListener('click', (e) => {
+        // Do not act on the burger toggle event.
+        if (e.target == burger)
+          return;
+
+        if (!burger.classList.contains('is-active'))
+          return;
+
+        burger.classList.remove('is-active');
+        menu.classList.remove('is-active');
+      });
+
+      for (const e of document.querySelectorAll('.swiper')) {
+        const parameters = {
+          speed: 750,
+          loop: true,
+          spaceBetween: 24,
+          preloadImages: false,
+          zoom: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination'
+          },
+          keyboard: {
+            enabled: true,
+            onlyInViewport: true
+          }
+        };
+
+        if (e.getAttribute("data-swiper-autoplay")) {
+          parameters.autoplay = {
+            delay: e.getAttribute("data-swiper-autoplay"),
+            disableOnInteraction: true
+          };
+        }
+
+        new Swiper(e, parameters);
+      }
+    </script>
+  </body>
+
+</html>

@@ -7,19 +7,11 @@
 }
 
 @font-face {
-  font-family: 'Font Awesome';
+  font-family: 'Font Awesome Solid';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 900;
   font-display: auto;
   src: url("../webfonts/fa-solid-900.woff2") format("woff2");
-}
-
-.fa-solid {
-  font-family: 'Font Awesome';
-}
-
-.fa-envelope {
-  --fa: "\f0e0"
 }
 
 @font-face {
@@ -30,29 +22,68 @@
   src: url("../webfonts/fa-brands-400.woff2") format("woff2");
 }
 
+.fa {
+  font-family: 'Font Awesome Solid';
+  font-style: normal;
+}
+
 .fa-brands {
   font-family: 'Font Awesome Brands';
-}
-
-.fa-github {
-  --fa: "\f09b"
-}
-
-
-.fa-mastodon {
-  --fa: "\f4f6"
-}
-
-.fa-instagram {
-  --fa: "\f16d"
-}
-
-.fa-youtube {
-  --fa: "\f167"
-}
-
-:is(.fa-regular, .fa-solid, .fa-brands, .fa):before {
-  font-feature-settings: normal;
   font-style: normal;
-  content: var(--fa)/""
+}
+
+.fa-microchip:before {
+  content: "\f2db";
+}
+
+.fa-magnifying-glass-chart:before {
+  content: "\e522";
+}
+
+.fa-computer:before {
+  content: "\e4e5";
+}
+
+.fa-book-open-reader:before {
+  content: "\f5da";
+}
+
+.fa-screwdriver-wrench:before {
+  content: "\f7d9";
+}
+
+.fa-file-code:before {
+  content: "\f1c9";
+}
+
+.fa-music:before {
+  content: "\f001";
+}
+
+.fa-sliders:before {
+  content: "\f1de";
+}
+
+.fa-plug:before {
+  content: "\f1e6";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+.fa-mastodon:before {
+  content: "\f4f6";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+.fa-youtube:before {
+  content: "\f167";
 }
